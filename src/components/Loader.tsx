@@ -16,18 +16,8 @@ const greetings = [
   { text: '안녕하세요', language: 'Korean' },
   { text: 'مرحبا', language: 'Arabic' },
   { text: 'नमस्ते', language: 'Hindi' },
-  { text: 'Sawubona', language: 'Zulu' },
-  { text: 'Sanibonani', language: 'Ndebele' },
-  { text: 'Dumela', language: 'Tswana' },
-  { text: 'Molo', language: 'Xhosa' },
-  { text: 'Avuxeni', language: 'Tsonga' },
-  { text: 'Ndaa', language: 'Venda' },
-  { text: 'Lumela', language: 'Sotho' },
   { text: 'Habari', language: 'Swahili' },
   { text: 'Salaam', language: 'Amharic' },
-  { text: 'Bawo', language: 'Yoruba' },
-  { text: 'Ndewo', language: 'Igbo' },
-  { text: 'Sannu', language: 'Hausa' },
   { text: 'Azul', language: 'Berber' },
   { text: 'Salama', language: 'Malagasy' },
   { text: 'Muraho', language: 'Kinyarwanda' },
@@ -47,10 +37,10 @@ export default function Loader({ onComplete }: LoaderProps) {
   useEffect(() => {
     const timeline = gsap.timeline()
     
-    // Initial fade in
+    // Initial fade in - slower
     timeline.fromTo('.loader-text', 
       { opacity: 0, y: 20 },
-      { opacity: 1, y: 0, duration: 0.5 }
+      { opacity: 1, y: 0, duration: 0.8 }
     )
 
     // Cycle through greetings
@@ -58,40 +48,40 @@ export default function Loader({ onComplete }: LoaderProps) {
       setCurrentIndex((prevIndex) => {
         const nextIndex = (prevIndex + 1) % greetings.length
         
-        // Animate text change - faster animations
+        // Animate text change - slower animations
         gsap.to('.loader-text', {
           opacity: 0,
           y: -20,
-          duration: 0.15,
+          duration: 0.4,
           onComplete: () => {
             gsap.to('.loader-text', {
               opacity: 1,
               y: 0,
-              duration: 0.15
+              duration: 0.4
             })
           }
         })
         
         return nextIndex
       })
-    }, 400) // Reduced from 800ms to 400ms
+    }, 1000) // Increased to 1000ms for slower transitions
 
     // Complete loader after showing all greetings
     const completeTimer = setTimeout(() => {
       clearInterval(interval)
       
-      // Final animation - fade out faster
+      // Final animation - slower fade out
       gsap.to('.loader-container', {
         opacity: 0,
         scale: 0.9,
-        duration: 0.6, // Reduced from 1s to 0.6s
+        duration: 1.2, // Increased to 1.2s for slower fade out
         ease: 'power2.inOut',
         onComplete: () => {
           setIsVisible(false)
           onComplete()
         }
       })
-    }, greetings.length * 400 + 500) // Show all greetings + 0.5 second (reduced from 1s)
+    }, greetings.length * 1000 + 1000) // Show all greetings + 1 second for slower overall timing
 
     return () => {
       clearInterval(interval)
