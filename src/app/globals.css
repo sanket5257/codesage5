@@ -11,7 +11,19 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto; /* Disable default smooth scroll to let Lenis handle it */
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
 }
 
 body {
@@ -75,4 +87,47 @@ body {
 
 .marquee-content {
   width: 200%;
+}
+
+/* Mascot Styles */
+.mascot-container {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mascot-container:hover {
+  transform: scale(1.05);
+}
+
+.eye-pupil {
+  transition: transform 0.3s ease-out;
+}
+
+/* Chat bubble animation */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.chat-bubble-enter {
+  animation: slideInUp 0.3s ease-out;
+}
+
+/* Pulse animation for attention */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(251, 146, 60, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(251, 146, 60, 0);
+  }
+}
+
+.mascot-pulse {
+  animation: pulse-glow 2s infinite;
 }

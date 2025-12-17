@@ -19,14 +19,14 @@ const testimonials = [
     name: "Helena Turpin",
     position: "Co-Founder, GoTiGR",
     image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face",
-    text: "We recently engaged Divyansh to migrate our website to Webflow, he was responsive and worked hard to get everything over the line. The final result is a functional and visually clean site with improved responsiveness and SEO, and we appreciate the effort that went into making the transition as smooth as possible. Overall, we're happy to have made the move."
+    text: "We recently engaged CodeSage to migrate our website to Webflow, they were responsive and worked hard to get everything over the line. The final result is a functional and visually clean site with improved responsiveness and SEO, and we appreciate the effort that went into making the transition as smooth as possible. Overall, we're happy to have made the move."
   },
   {
     id: 3,
     name: "Anurag Singh",
     position: "Senior Product Marketing Manager, Hopstack",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
-    text: "I had the pleasure of working with Divyansh on our website revamp project at Hopstack, and I can confidently say that he is exceptional at what he does. His design thinking is top-notch, allowing us to achieve a clean, modern, and highly functional website."
+    text: "I had the pleasure of working with CodeSage on our website revamp project at Hopstack, and I can confidently say that they are exceptional at what they do. Their design thinking is top-notch, allowing us to achieve a clean, modern, and highly functional website."
   },
   {
     id: 4,
@@ -154,7 +154,7 @@ export default function Testimonials() {
           Our happy partners
         </h2>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-12">
-          Hear from clients who&apos;ve experienced remarkable transformations with Webyansh.
+          Hear from clients who&apos;ve experienced remarkable transformations with CodeSage.
         </p>
       </div>
 

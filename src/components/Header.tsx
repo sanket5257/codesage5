@@ -447,9 +447,9 @@ export default function Header() {
                 </div>
               )}
             </div>
-            <button className="bg-primary text-white px-6 py-3 rounded-full hover:bg-primary/90 transition-colors font-medium">
+            <a href="/contact" className="bg-primary text-white px-6 py-3 rounded-full hover:bg-primary/90 transition-colors font-medium inline-block">
               Book a call
-            </button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -473,9 +473,9 @@ export default function Header() {
               <a href="#industries" className="text-gray-700 hover:text-primary transition-colors">Industries</a>
               <a href="/portfolio" className="text-gray-700 hover:text-primary transition-colors">Portfolio</a>
               <a href="#resources" className="text-gray-700 hover:text-primary transition-colors">Resources</a>
-              <button className="bg-primary text-white px-6 py-3 rounded-full hover:bg-primary/90 transition-colors font-medium w-fit">
+              <a href="/contact" className="bg-primary text-white px-6 py-3 rounded-full hover:bg-primary/90 transition-colors font-medium w-fit inline-block">
                 Book a call
-              </button>
+              </a>
             </nav>
           </div>
         )}

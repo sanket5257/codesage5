@@ -83,7 +83,7 @@ export default function Footer() {
               {/* Contact */}
               <div className="text-sm text-gray-600 space-y-2">
                 <p>+91 6377588643</p>
-                <p>divyansh@codesage.com</p>
+                <p>hello@codesage.com</p>
               </div>
               
               {/* Language Selector */}
