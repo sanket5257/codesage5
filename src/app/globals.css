@@ -131,3 +131,21 @@ body {
 .mascot-pulse {
   animation: pulse-glow 2s infinite;
 }
+
+/* Column Marquee Animation */
+@keyframes scrollUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-66.666%);
+  }
+}
+
+.animate-scroll-up {
+  animation: scrollUp var(--scroll-duration, 30s) linear infinite;
+}
+
+.pause-animation:hover {
+  animation-play-state: paused;
+}

@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Users, ArrowLeft } from 'lucide-react'
+import Link from 'next/link'
 import CursorFollower from '../../components/CursorFollower'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
@@ -85,11 +86,12 @@ export default function PortfolioPage() {
           {/* Case Study Cards */}
           <div className="max-w-7xl mx-auto space-y-8">
             {/* Futurense Case Study */}
-            <div 
-              className="portfolio-item bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-            >
+            <Link href="/portfolio/futurense-technologies">
+              <div 
+                className="portfolio-item bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
               <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[500px]">
                 {/* Left Content Panel */}
                 <div className="p-12 flex flex-col justify-between bg-gray-50">
@@ -160,14 +162,16 @@ export default function PortfolioPage() {
                  
                 </div>
               </div>
-            </div>
+              </div>
+            </Link>
 
             {/* Hopstack Case Study */}
-            <div 
-              className="portfolio-item bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-            >
+            <Link href="/portfolio/hopstack">
+              <div 
+                className="portfolio-item bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
               <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[500px]">
                 {/* Left Video Panel */}
                 <div className="relative bg-black">
@@ -240,7 +244,8 @@ export default function PortfolioPage() {
                   </div>
                 </div>
               </div>
-            </div>
+              </div>
+            </Link>
 
             {/* Logo Animation Case Study */}
             <div 

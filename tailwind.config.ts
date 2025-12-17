@@ -15,6 +15,20 @@ const config: Config = {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
       },
+      animation: {
+        'marquee-up': 'marquee-up 20s linear infinite',
+        'marquee-down': 'marquee-down 20s linear infinite',
+      },
+      keyframes: {
+        'marquee-up': {
+          '0%': { transform: 'translateY(0%)' },
+          '100%': { transform: 'translateY(-50%)' },
+        },
+        'marquee-down': {
+          '0%': { transform: 'translateY(-50%)' },
+          '100%': { transform: 'translateY(0%)' },
+        },
+      },
     },
   },
   plugins: [],

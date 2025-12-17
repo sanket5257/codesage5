@@ -32,6 +32,14 @@ export interface ServiceItem {
   tags: string[]
 }
 
+export interface MarqueeItem {
+  id: number
+  image: string
+  title: string
+  category: string
+  size: 'small' | 'medium' | 'large'
+}
+
 export interface ServiceData {
   title: string
   subtitle: string
@@ -40,6 +48,7 @@ export interface ServiceData {
   badge: string
   features: ServiceFeature[]
   services: ServiceItem[]
+  marqueeItems: MarqueeItem[]
 }
 
 export const servicesData: Record<string, ServiceData> = {
@@ -106,6 +115,50 @@ export const servicesData: Record<string, ServiceData> = {
         description: "We design high-converting landing pages to convert visitors to paying customers. Increase your conversion rates now!",
         tags: ["A/B Testing", "Landing Page Optimization"]
       }
+    ],
+    marqueeItems: [
+      {
+        id: 1,
+        image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=300&fit=crop",
+        title: "Mobile App Interface Design",
+        category: "UI/UX Design",
+        size: "large"
+      },
+      {
+        id: 2,
+        image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=300&fit=crop",
+        title: "Dashboard Analytics UI",
+        category: "UI/UX Design",
+        size: "medium"
+      },
+      {
+        id: 3,
+        image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=400&h=300&fit=crop",
+        title: "E-commerce User Experience",
+        category: "UI/UX Design",
+        size: "small"
+      },
+      {
+        id: 4,
+        image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=300&fit=crop",
+        title: "Responsive Web Design",
+        category: "UI/UX Design",
+        size: "medium"
+      },
+      {
+        id: 5,
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
+        title: "User Research & Testing",
+        category: "UI/UX Design",
+        size: "large"
+      },
+      {
+        id: 6,
+        image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop",
+        title: "Wireframe & Prototyping",
+        category: "UI/UX Design",
+        size: "small"
+      }
     ]
   },
   'webflow-development': {
@@ -170,6 +223,50 @@ export const servicesData: Record<string, ServiceData> = {
         title: "Ongoing Support",
         description: "Get continuous support and maintenance to keep your Webflow site running smoothly.",
         tags: ["24/7 Support", "Regular Updates"]
+      }
+    ],
+    marqueeItems: [
+      {
+        id: 1,
+        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop",
+        title: "Custom Webflow Development",
+        category: "Webflow Development",
+        size: "large"
+      },
+      {
+        id: 2,
+        image: "https://images.unsplash.com/photo-1555421689-491a97ff2040?w=400&h=300&fit=crop",
+        title: "E-commerce Integration",
+        category: "Webflow Development",
+        size: "medium"
+      },
+      {
+        id: 3,
+        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop",
+        title: "CMS Setup & Configuration",
+        category: "Webflow Development",
+        size: "small"
+      },
+      {
+        id: 4,
+        image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=300&fit=crop",
+        title: "Responsive Development",
+        category: "Webflow Development",
+        size: "medium"
+      },
+      {
+        id: 5,
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
+        title: "Performance Optimization",
+        category: "Webflow Development",
+        size: "large"
+      },
+      {
+        id: 6,
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
+        title: "Third-party Integrations",
+        category: "Webflow Development",
+        size: "small"
       }
     ]
   },
@@ -236,6 +333,50 @@ export const servicesData: Record<string, ServiceData> = {
         description: "Specialized local SEO services to help your business dominate local search results.",
         tags: ["Local Rankings", "Google My Business"]
       }
+    ],
+    marqueeItems: [
+      {
+        id: 1,
+        image: "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=400&h=300&fit=crop",
+        title: "SEO Strategy & Planning",
+        category: "Webflow SEO",
+        size: "large"
+      },
+      {
+        id: 2,
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
+        title: "Keyword Research & Analysis",
+        category: "Webflow SEO",
+        size: "medium"
+      },
+      {
+        id: 3,
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
+        title: "Technical SEO Audit",
+        category: "Webflow SEO",
+        size: "small"
+      },
+      {
+        id: 4,
+        image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop",
+        title: "Content Optimization",
+        category: "Webflow SEO",
+        size: "medium"
+      },
+      {
+        id: 5,
+        image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=300&fit=crop",
+        title: "Local SEO Services",
+        category: "Webflow SEO",
+        size: "large"
+      },
+      {
+        id: 6,
+        image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=300&fit=crop",
+        title: "Performance Monitoring",
+        category: "Webflow SEO",
+        size: "small"
+      }
     ]
   },
   'growth-marketing': {
@@ -300,6 +441,50 @@ export const servicesData: Record<string, ServiceData> = {
         title: "Conversion Optimization",
         description: "Systematic optimization of your website and landing pages to maximize conversions.",
         tags: ["CRO", "Landing Page Testing"]
+      }
+    ],
+    marqueeItems: [
+      {
+        id: 1,
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
+        title: "Growth Strategy Development",
+        category: "Growth Marketing",
+        size: "large"
+      },
+      {
+        id: 2,
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
+        title: "Conversion Rate Optimization",
+        category: "Growth Marketing",
+        size: "medium"
+      },
+      {
+        id: 3,
+        image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=300&fit=crop",
+        title: "Performance Marketing",
+        category: "Growth Marketing",
+        size: "small"
+      },
+      {
+        id: 4,
+        image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop",
+        title: "Customer Acquisition",
+        category: "Growth Marketing",
+        size: "medium"
+      },
+      {
+        id: 5,
+        image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=300&fit=crop",
+        title: "Marketing Automation",
+        category: "Growth Marketing",
+        size: "large"
+      },
+      {
+        id: 6,
+        image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=400&h=300&fit=crop",
+        title: "Analytics & Reporting",
+        category: "Growth Marketing",
+        size: "small"
       }
     ]
   },
@@ -366,6 +551,50 @@ export const servicesData: Record<string, ServiceData> = {
         description: "Comprehensive brand guidelines and asset library for consistent brand application.",
         tags: ["Brand Bible", "Asset Library"]
       }
+    ],
+    marqueeItems: [
+      {
+        id: 1,
+        image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=300&fit=crop",
+        title: "Brand Identity Design",
+        category: "Branding",
+        size: "large"
+      },
+      {
+        id: 2,
+        image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=400&h=300&fit=crop",
+        title: "Logo Design & Development",
+        category: "Branding",
+        size: "medium"
+      },
+      {
+        id: 3,
+        image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=300&fit=crop",
+        title: "Brand Strategy & Positioning",
+        category: "Branding",
+        size: "small"
+      },
+      {
+        id: 4,
+        image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=300&fit=crop",
+        title: "Brand Guidelines",
+        category: "Branding",
+        size: "medium"
+      },
+      {
+        id: 5,
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
+        title: "Brand Messaging",
+        category: "Branding",
+        size: "large"
+      },
+      {
+        id: 6,
+        image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop",
+        title: "Digital Brand Assets",
+        category: "Branding",
+        size: "small"
+      }
     ]
   },
   'webflow-migration': {
@@ -430,6 +659,50 @@ export const servicesData: Record<string, ServiceData> = {
         title: "Post-Migration Support",
         description: "Ongoing support and optimization after your migration is complete.",
         tags: ["Ongoing Support", "Performance Monitoring"]
+      }
+    ],
+    marqueeItems: [
+      {
+        id: 1,
+        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop",
+        title: "Platform Migration Services",
+        category: "Webflow Migration",
+        size: "large"
+      },
+      {
+        id: 2,
+        image: "https://images.unsplash.com/photo-1555421689-491a97ff2040?w=400&h=300&fit=crop",
+        title: "SEO-Safe Migration",
+        category: "Webflow Migration",
+        size: "medium"
+      },
+      {
+        id: 3,
+        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop",
+        title: "Content Migration",
+        category: "Webflow Migration",
+        size: "small"
+      },
+      {
+        id: 4,
+        image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=300&fit=crop",
+        title: "Performance Improvement",
+        category: "Webflow Migration",
+        size: "medium"
+      },
+      {
+        id: 5,
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
+        title: "Design Enhancement",
+        category: "Webflow Migration",
+        size: "large"
+      },
+      {
+        id: 6,
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
+        title: "Training & Support",
+        category: "Webflow Migration",
+        size: "small"
       }
     ]
   },
@@ -496,6 +769,50 @@ export const servicesData: Record<string, ServiceData> = {
         description: "Training sessions and consultation to help you get the most out of your Webflow website.",
         tags: ["User Training", "Best Practices"]
       }
+    ],
+    marqueeItems: [
+      {
+        id: 1,
+        image: "https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=400&h=300&fit=crop",
+        title: "24/7 Technical Support",
+        category: "Webflow Support",
+        size: "large"
+      },
+      {
+        id: 2,
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
+        title: "Regular Maintenance",
+        category: "Webflow Support",
+        size: "medium"
+      },
+      {
+        id: 3,
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
+        title: "Performance Optimization",
+        category: "Webflow Support",
+        size: "small"
+      },
+      {
+        id: 4,
+        image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop",
+        title: "Content Management",
+        category: "Webflow Support",
+        size: "medium"
+      },
+      {
+        id: 5,
+        image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=300&fit=crop",
+        title: "SEO Monitoring",
+        category: "Webflow Support",
+        size: "large"
+      },
+      {
+        id: 6,
+        image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=300&fit=crop",
+        title: "Bug Fixes & Updates",
+        category: "Webflow Support",
+        size: "small"
+      }
     ]
   },
   'webflow-integration': {
@@ -561,6 +878,50 @@ export const servicesData: Record<string, ServiceData> = {
         description: "Custom API development and integration for unique business requirements.",
         tags: ["Custom Development", "API Creation"]
       }
+    ],
+    marqueeItems: [
+      {
+        id: 1,
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
+        title: "Marketing Tool Integration",
+        category: "Webflow Integration",
+        size: "large"
+      },
+      {
+        id: 2,
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
+        title: "Analytics Integration",
+        category: "Webflow Integration",
+        size: "medium"
+      },
+      {
+        id: 3,
+        image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=300&fit=crop",
+        title: "E-commerce Integration",
+        category: "Webflow Integration",
+        size: "small"
+      },
+      {
+        id: 4,
+        image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop",
+        title: "Social Media Integration",
+        category: "Webflow Integration",
+        size: "medium"
+      },
+      {
+        id: 5,
+        image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=300&fit=crop",
+        title: "API Integrations",
+        category: "Webflow Integration",
+        size: "large"
+      },
+      {
+        id: 6,
+        image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=400&h=300&fit=crop",
+        title: "SEO Tool Integration",
+        category: "Webflow Integration",
+        size: "small"
+      }
     ]
   },
   'conversion-optimization': {
@@ -625,6 +986,50 @@ export const servicesData: Record<string, ServiceData> = {
         title: "Ongoing CRO Management",
         description: "Monthly CRO management with continuous testing and optimization.",
         tags: ["Monthly Management", "Continuous Testing"]
+      }
+    ],
+    marqueeItems: [
+      {
+        id: 1,
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
+        title: "A/B Testing & Optimization",
+        category: "Conversion Rate Optimization",
+        size: "large"
+      },
+      {
+        id: 2,
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
+        title: "Analytics & Data Analysis",
+        category: "Conversion Rate Optimization",
+        size: "medium"
+      },
+      {
+        id: 3,
+        image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=300&fit=crop",
+        title: "Landing Page Optimization",
+        category: "Conversion Rate Optimization",
+        size: "small"
+      },
+      {
+        id: 4,
+        image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop",
+        title: "User Experience Testing",
+        category: "Conversion Rate Optimization",
+        size: "medium"
+      },
+      {
+        id: 5,
+        image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=300&fit=crop",
+        title: "Conversion Funnel Analysis",
+        category: "Conversion Rate Optimization",
+        size: "large"
+      },
+      {
+        id: 6,
+        image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=400&h=300&fit=crop",
+        title: "Performance Monitoring",
+        category: "Conversion Rate Optimization",
+        size: "small"
       }
     ]
   }

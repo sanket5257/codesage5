@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useState } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { notFound } from 'next/navigation'
@@ -29,6 +29,7 @@ import {
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import CursorFollower from '@/components/CursorFollower'
+import ColumnMarquee from '@/components/ColumnMarquee'
 import { servicesData } from '@/data/servicesData'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -79,6 +80,8 @@ export default function ServicePage({ params }: ServicePageProps) {
       isVideo: true
     }
   ]
+
+
 
 
 
@@ -164,19 +167,28 @@ export default function ServicePage({ params }: ServicePageProps) {
                 </div>
               </div>
               
-              <div className="animate-on-scroll relative">
-                <div className="rounded-2xl overflow-hidden shadow-2xl relative z-10">
-                  <video
-                    src={serviceData.heroVideo}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="w-full h-96 object-cover"
-                  />
-                </div>
+              <div className="animate-on-scroll relative lg:hidden">
+                <ColumnMarquee 
+                  items={serviceData.marqueeItems}
+                  height="h-96"
+                  speed={25}
+                  columns={2}
+                />
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Full Width Marquee Section */}
+        <section className="py-0 bg-white hidden lg:block">
+          <div className="animate-on-scroll">
+            <ColumnMarquee 
+              items={serviceData.marqueeItems}
+              height="h-[600px]"
+              speed={25}
+              columns={3}
+              fullWidth={true}
+            />
           </div>
         </section>
 

@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Users } from 'lucide-react'
+import Link from 'next/link'
 import CursorFollower from './CursorFollower'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -12,21 +13,7 @@ export default function Portfolio() {
   const [cursorText, setCursorText] = useState('')
   const [showCursor, setShowCursor] = useState(false)
 
-  useEffect(() => {
-    gsap.fromTo('.portfolio-item', 
-      { y: 100, opacity: 0 },
-      { 
-        y: 0, 
-        opacity: 1, 
-        duration: 0.8,
-        stagger: 0.2,
-        scrollTrigger: {
-          trigger: '.portfolio-section',
-          start: 'top 80%',
-        }
-      }
-    )
-  }, [])
+ 
 
   const handleMouseEnter = () => {
     setCursorText('View Case')
@@ -57,13 +44,14 @@ export default function Portfolio() {
           </div>
 
           {/* Case Study Cards */}
-          <div className="max-w-7xl mx-auto space-y-8">
+          <div className="max-w-7xl mx-auto space-y-16">
             {/* Futurense Case Study */}
-            <div 
-              className="portfolio-item bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-            >
+            <Link href="/portfolio/futurense-technologies">
+              <div 
+                className="portfolio-item bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
               <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[500px]">
                 {/* Left Content Panel */}
                 <div className="p-12 flex flex-col justify-between bg-gray-50">
@@ -188,14 +176,16 @@ export default function Portfolio() {
                   <div className="absolute inset-0 bg-black/5 pointer-events-none"></div>
                 </div>
               </div>
-            </div>
+              </div>
+            </Link>
 
             {/* Hopstack Case Study */}
-            <div 
-              className="portfolio-item bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-            >
+            <Link href="/portfolio/hopstack">
+              <div 
+                className="portfolio-item bg-white rounded-3xl mt-10 overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
               <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[500px]">
                 {/* Left Video Panel */}
                 <div className="relative bg-black">
@@ -303,7 +293,8 @@ export default function Portfolio() {
                   </div>
                 </div>
               </div>
-            </div>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
