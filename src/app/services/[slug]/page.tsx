@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { notFound } from 'next/navigation'
+import Image from 'next/image'
 import { 
   ArrowLeft,
   ArrowRight,
@@ -291,10 +292,11 @@ export default function ServicePage({ params }: ServicePageProps) {
                         className="w-full h-full object-cover rounded-lg"
                       />
                     ) : (
-                      <img
+                      <Image
                         src={portfolioItems[currentPortfolioIndex].image}
                         alt={portfolioItems[currentPortfolioIndex].title}
-                        className="w-full h-full object-cover rounded-lg"
+                        fill
+                        className="object-cover rounded-lg"
                       />
                     )}
                   </div>

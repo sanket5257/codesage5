@@ -2,6 +2,7 @@
 
 import { useParams } from 'next/navigation'
 import Link from 'next/link'
+import Image from 'next/image'
 import { projectsData } from '@/data/projectsData'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
@@ -35,12 +36,12 @@ export default function ProjectDetails() {
           {/* Top Content */}
           <div className="py-16">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight max-w-5xl">
-              {project.title} stands as India's fastest-growing AI skilling company, founded in March 2020 by{' '}
+              {project.title} stands as India&apos;s fastest-growing AI skilling company, founded in March 2020 by{' '}
               <span className="underline">Raghav Gupta</span> (Founder & CEO).
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 leading-relaxed mb-16 max-w-4xl">
-              {project.title}'s mission centers on building "AI-ready talent" through upskilling programs, strategic partnerships with educational institutions including IITs and IIMs, and robust employment support systems. Their offer training programs, international higher education pathways, and strong placement outcomes.
+              {project.title}&apos;s mission centers on building &quot;AI-ready talent&quot; through upskilling programs, strategic partnerships with educational institutions including IITs and IIMs, and robust employment support systems. Their offer training programs, international higher education pathways, and strong placement outcomes.
             </p>
 
             {/* Stats Grid */}
@@ -74,10 +75,11 @@ export default function ProjectDetails() {
                 <source src={project.hero.video} type="video/webm" />
                 <source src={project.hero.video.replace('.webm', '.mp4')} type="video/mp4" />
                 {/* Fallback image if video fails to load */}
-                <img 
+                <Image 
                   src={project.gallery[0]} 
                   alt="Project showcase"
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
                 />
               </video>
             </div>
@@ -94,7 +96,7 @@ export default function ProjectDetails() {
                   {project.title}
                 </h2>
                 <p className="text-lg text-gray-300 leading-relaxed mb-8">
-                  {project.title} Technologies Pvt. Ltd. stands as a leading force in India's EdTech landscape, specifically focused on AI-skilling and talent development.
+                  {project.title} Technologies Pvt. Ltd. stands as a leading force in India&apos;s EdTech landscape, specifically focused on AI-skilling and talent development.
                 </p>
                 
                 {/* Services Tags */}

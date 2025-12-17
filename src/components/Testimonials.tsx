@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import Image from 'next/image'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -165,9 +166,11 @@ export default function Testimonials() {
             key={index}
             className="w-12 h-12 rounded-full overflow-hidden border-2 border-white shadow-md"
           >
-            <img
+            <Image
               src={avatar}
               alt={testimonials[index].name}
+              width={48}
+              height={48}
               className="w-full h-full object-cover"
             />
           </div>
@@ -190,9 +193,11 @@ export default function Testimonials() {
               
               <div className="flex items-center">
                 <div className="w-10 h-10 rounded-full overflow-hidden mr-3 flex-shrink-0">
-                  <img
+                  <Image
                     src={testimonial.image}
                     alt={testimonial.name}
+                    width={40}
+                    height={40}
                     className="w-full h-full object-cover"
                   />
                 </div>
