@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { Linkedin, Twitter, Instagram, Dribbble, ChevronDown } from 'lucide-react'
 import CursorFollower from './CursorFollower'
 
@@ -26,8 +27,14 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
             {/* Company Info */}
             <div className="space-y-6">
-              <div className="text-2xl font-bold text-primary">
-                CODESAGE
+              <div>
+                <Image
+                  src="/images/codesage.png"
+                  alt="CodeSage"
+                  width={180}
+                  height={50}
+                  className="h-16 w-auto"
+                />
               </div>
               
               {/* Social Icons */}

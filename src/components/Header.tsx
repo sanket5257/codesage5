@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
+import Image from 'next/image'
 import { 
   ChevronDown, 
   Palette, 
@@ -108,8 +109,14 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="header-animate">
-            <a href="/" className="text-2xl font-bold text-primary hover:opacity-80 transition-opacity">
-              <span className="text-primary">CODESAGE</span>
+            <a href="/" className="hover:opacity-80 transition-opacity">
+              <Image
+                src="/images/codesage.png"
+                alt="CodeSage"
+                width={200}
+                height={60}
+                className="h-14 w-auto"
+              />
             </a>
           </div>
           
