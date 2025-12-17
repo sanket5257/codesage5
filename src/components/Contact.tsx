@@ -269,7 +269,7 @@ export default function Contact() {
                   <div className="flex flex-col sm:flex-row gap-4">
                     <button
                       type="submit"
-                      className="flex-1 bg-orange-500 text-white px-8 py-4 rounded-lg font-medium hover:bg-orange-600 transition-colors flex items-center justify-center space-x-2"
+                      className="flex-1 bg-orange-600  text-white px-8 py-4 rounded-lg font-medium hover:bg-orange-600 transition-colors flex items-center justify-center space-x-2"
                       onMouseEnter={() => handleMouseEnter('Send Message')}
                       onMouseLeave={handleMouseLeave}
                     >

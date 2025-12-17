@@ -168,7 +168,7 @@ export default function PortfolioPage() {
             {/* Hopstack Case Study */}
             <Link href="/portfolio/hopstack">
               <div 
-                className="portfolio-item bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+                className="portfolio-item bg-white rounded-3xl mt-10 verflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
