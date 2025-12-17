@@ -42,10 +42,10 @@ export default function ExploreProjects() {
       <section className="explore-section py-20 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto">
-            <div className="relative overflow-hidden rounded-3xl bg-gray-900 min-h-[300px]">
+            <div className="relative overflow-hidden rounded-3xl bg-black min-h-[500px]">
               {/* Background Video */}
               <video 
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover "
                 autoPlay 
                 muted 
                 loop 
@@ -56,7 +56,7 @@ export default function ExploreProjects() {
                   e.currentTarget.style.display = 'none'
                 }}
               >
-                <source src="/videos/logo.mp4" type="video/mp4" />
+                <source src="/videos/logo2.mp4" type="video/mp4" />
               </video>
               
               {/* Gradient Overlay */}
