@@ -16,14 +16,6 @@ const greetings = [
   { text: '안녕하세요', language: 'Korean' },
   { text: 'مرحبا', language: 'Arabic' },
   { text: 'नमस्ते', language: 'Hindi' },
-  { text: 'Habari', language: 'Swahili' },
-  { text: 'Salaam', language: 'Amharic' },
-  { text: 'Azul', language: 'Berber' },
-  { text: 'Salama', language: 'Malagasy' },
-  { text: 'Muraho', language: 'Kinyarwanda' },
-  { text: 'Mwaramutse', language: 'Kirundi' },
-  { text: 'Jambo', language: 'Kikuyu' },
-  { text: 'Ola', language: 'Wolof' }
 ]
 
 interface LoaderProps {
