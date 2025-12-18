@@ -376,47 +376,21 @@ export default function Header() {
             >
               Portfolio
             </a>
-            
-            {/* Resources Dropdown */}
-            <div 
-              className="relative dropdown-container py-2"
-              onMouseEnter={() => handleDropdownAreaMouseEnter('resources', 'Resources')}
-              onMouseLeave={handleDropdownAreaMouseLeave}
+
+            <a 
+              href="/about" 
+              className="text-gray-700 hover:text-primary transition-colors"
+              onMouseEnter={() => {
+                setCursorText('About us')
+                setShowCursor(true)
+              }}
+              onMouseLeave={() => {
+                setShowCursor(false)
+                setCursorText('')
+              }}
             >
-              <button 
-                className={`flex items-center transition-colors ${
-                  activeDropdown === 'resources' ? 'text-primary' : 'text-gray-700 hover:text-primary'
-                }`}
-                onClick={() => handleDropdownToggle('resources')}
-              >
-                Resources
-                <ChevronDown className={`w-4 h-4 ml-1 transition-transform ${
-                  activeDropdown === 'resources' ? 'rotate-180' : ''
-                }`} />
-              </button>
-              
-              {activeDropdown === 'resources' && (
-                <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-64 bg-white rounded-xl shadow-2xl border border-gray-100 p-6 z-50">
-                  <div className="space-y-1">
-                    <a href="#" className="block px-4 py-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg transition-colors">
-                      Blog
-                    </a>
-                    <a href="#" className="block px-4 py-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg transition-colors">
-                      Case Studies
-                    </a>
-                    <a href="#" className="block px-4 py-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg transition-colors">
-                      Webflow Templates
-                    </a>
-                    <a href="#" className="block px-4 py-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg transition-colors">
-                      Free Tools
-                    </a>
-                    <a href="#" className="block px-4 py-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg transition-colors">
-                      Documentation
-                    </a>
-                  </div>
-                </div>
-              )}
-            </div>
+              About
+            </a>
           </nav>
 
           {/* Right side - Language and CTA */}
@@ -479,7 +453,7 @@ export default function Header() {
               <a href="#services" className="text-gray-700 hover:text-primary transition-colors">Services</a>
               <a href="#industries" className="text-gray-700 hover:text-primary transition-colors">Industries</a>
               <a href="/portfolio" className="text-gray-700 hover:text-primary transition-colors">Portfolio</a>
-              <a href="#resources" className="text-gray-700 hover:text-primary transition-colors">Resources</a>
+              <a href="/about" className="text-gray-700 hover:text-primary transition-colors">About</a>
               <a href="/contact" className="bg-primary text-white px-6 py-3 rounded-full hover:bg-primary/90 transition-colors font-medium w-fit inline-block">
                 Book a call
               </a>
