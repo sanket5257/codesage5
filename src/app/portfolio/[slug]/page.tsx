@@ -146,7 +146,7 @@ export default function ProjectDetails() {
       
 
       {/* Challenge Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-100">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-4xl font-bold mb-12 text-black">{project.challenge.title}</h2>
           <p className="text-lg text-gray-800 leading-relaxed mb-12">
@@ -168,19 +168,59 @@ export default function ProjectDetails() {
         </div>
       </section>
 
-      {/* Video Section */}
-      <section className="relative h-screen max-w-4xl mx-auto rounded-2xl overflow-hidden bg-black">
-        <video 
-          className="absolute inset-0 w-full h-full object-cover"
-          autoPlay
-          muted
-          loop
-          playsInline
-        >
-          <source src="/videos/67fb46459daf80597440ed56_68e14daabac9120c0c49b51f_Futurense leadership council-transcode.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        
+      {/* MacBook Video Section */}
+      <section className="py-20 bg-gray-100">
+        <div className="max-w-7xl mx-auto px-6">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black">
+              See {project.title} in Action
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Watch how we transformed their digital presence and delivered exceptional results through innovative solutions.
+            </p>
+          </div>
+
+          {/* MacBook Wrapper with CDN Image */}
+          <div className="relative max-w-5xl mx-auto  ">
+
+            <div className="relative ">
+              {/* MacBook Image in front */}
+              <Image
+                src="https://cdn.prod.website-files.com/67fb46459daf80597440ed56/6814cf43d68a83814339a6a8_MacBook%20Pro%2016.svg"
+                alt="MacBook Pro"
+                width={1200}
+                height={800}
+                className="w-full h-auto relative z-10"
+                priority
+              />
+              
+              {/* Video positioned within the MacBook screen */}
+              <div className="absolute top-[5%] left-[10%] right-[10%] bottom-[5%] z-10">
+                <div className="w-full h-full rounded-[8px] overflow-hidden">
+                  <video 
+                    className="w-full h-full object-cover"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    poster={project.gallery[0]}
+                  >
+                    <source src="/videos/67fb46459daf80597440ed56_68e14daabac9120c0c49b51f_Futurense leadership council-transcode.mp4" type="video/mp4" />
+                    <source src="/videos/Futurense case study.webm" type="video/webm" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+            </div>
+
+            {/* Floating Elements */}
+            <div className="absolute -top-4 -right-4 w-20 h-20 bg-orange-500/20 rounded-full blur-xl animate-pulse"></div>
+            <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-blue-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>
+          </div>
+
+          
+        </div>
       </section>
 
       {/* Solution Section */}
