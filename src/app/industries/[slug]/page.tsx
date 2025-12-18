@@ -22,12 +22,15 @@ import {
   Zap,
   BarChart3,
   Target,
-  Users
+  Users,
+  ArrowRight
 } from 'lucide-react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import CursorFollower from '@/components/CursorFollower'
 import { industriesData } from '@/data/industriesData'
+import { getCaseStudiesByIndustry } from '@/data/caseStudiesData'
+import Link from 'next/link'
 import ExploreProjects from '@/components/ExploreProjects'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -319,7 +322,7 @@ export default function IndustryPage({ params }: IndustryPageProps) {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
               {industryData.features.map((feature, index) => (
                 <div key={index} className="animate-on-scroll bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
                   <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-6">
@@ -339,12 +342,168 @@ export default function IndustryPage({ params }: IndustryPageProps) {
             </div>
           </div>
         </section>
-              <ExploreProjects/>
-   
 
-      
+        {/* Case Studies Section */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16 animate-on-scroll">
+              <div className="flex items-center justify-center mb-4">
+                <span className="text-sm text-gray-500 mr-2">✦</span>
+                <span className="text-sm text-gray-500 uppercase tracking-wider">Success Stories</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                {industryData.title} Case Studies
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Discover how we&apos;ve helped {industryData.title.toLowerCase()} companies achieve remarkable results through innovative design and development solutions.
+              </p>
+            </div>
 
-      
+            {/* Case Study Cards */}
+            <div className="max-w-7xl mx-auto  space-y-24">
+              {getCaseStudiesByIndustry(params.slug).map((caseStudy, index) => (
+                <Link key={caseStudy.id} href={caseStudy.link}>
+                  <div 
+                    className="animate-on-scroll mt-10 bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer border border-gray-100"
+                    onMouseEnter={() => handleMouseEnter('View Case')}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    <div className={`grid grid-cols-1 lg:grid-cols-2 min-h-[500px] ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
+                      {/* Content Panel */}
+                      <div className={`p-12 flex flex-col justify-between bg-gray-50 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
+                        {/* Company Logo */}
+                        <div className="flex items-center space-x-3 mb-8">
+                          {caseStudy.company === 'Futurense' && (
+                            <>
+                              <Users className="w-6 h-6 text-gray-700" />
+                              <span className="text-xl font-bold text-gray-900">Futurense</span>
+                            </>
+                          )}
+                          {caseStudy.company === 'Hopstack' && (
+                            <>
+                              <div className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center">
+                                <span className="text-white text-xs font-bold">H</span>
+                              </div>
+                              <span className="text-xl font-bold text-gray-900">Hopstack</span>
+                            </>
+                          )}
+                          {!['Futurense', 'Hopstack'].includes(caseStudy.company) && (
+                            <>
+                              <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
+                                <span className="text-white text-xs font-bold">{caseStudy.company.charAt(0)}</span>
+                              </div>
+                              <span className="text-xl font-bold text-gray-900">{caseStudy.company}</span>
+                            </>
+                          )}
+                        </div>
+
+                        {/* Main Content */}
+                        <div className="flex-1">
+                          <h3 className="text-2xl font-bold text-gray-900 mb-6 leading-tight">
+                            {caseStudy.title}
+                          </h3>
+                          
+                          <div className="flex flex-wrap gap-2 mb-8">
+                            {caseStudy.tags.map((tag, tagIndex) => (
+                              <span key={tagIndex} className="bg-white text-gray-700 px-3 py-1 rounded-full text-xs font-medium border border-gray-200">
+                                {tag}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Bottom Stats */}
+                        <div className="mt-auto">
+                          <div className="flex items-baseline space-x-2 mb-3">
+                            <span className="text-4xl font-bold text-gray-900">{caseStudy.stats.primary.value}</span>
+                            <span className="text-sm text-gray-600">{caseStudy.stats.primary.label}</span>
+                          </div>
+                          {caseStudy.stats.secondary && (
+                            <div className="flex items-baseline space-x-2 mb-4">
+                              <span className="text-2xl font-semibold text-gray-700">{caseStudy.stats.secondary.value}</span>
+                              <span className="text-sm text-gray-500">{caseStudy.stats.secondary.label}</span>
+                            </div>
+                          )}
+                          <div className="flex flex-wrap gap-2">
+                            <span className="bg-white text-gray-700 px-3 py-1 rounded-full text-xs font-medium border border-gray-200">
+                              Webflow Development
+                            </span>
+                            <span className="bg-white text-gray-700 px-3 py-1 rounded-full text-xs font-medium border border-gray-200">
+                              UI/UX Design
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Media Panel */}
+                      <div className={`relative bg-black ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
+                        {caseStudy.video ? (
+                          <>
+                            <video 
+                              className="w-full h-full object-cover"
+                              autoPlay 
+                              muted 
+                              loop 
+                              playsInline
+                              onError={(e) => {
+                                console.log('Video failed to load, showing fallback')
+                                const fallback = e.currentTarget.nextElementSibling as HTMLElement
+                                if (fallback) {
+                                  e.currentTarget.style.display = 'none'
+                                  fallback.style.display = 'flex'
+                                }
+                              }}
+                            >
+                              <source src={caseStudy.video} type="video/webm" />
+                            </video>
+                            
+                            {/* Fallback */}
+                            <div className="absolute inset-0 bg-gradient-to-br from-orange-900 via-red-900 to-pink-900 p-8 items-center justify-center" style={{ display: 'none' }}>
+                              <div className="w-full max-w-lg space-y-4">
+                                <div className="bg-white rounded-lg p-4 shadow-xl">
+                                  <div className="flex items-center space-x-2 mb-3">
+                                    <div className="w-2 h-2 bg-red-400 rounded-full"></div>
+                                    <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
+                                    <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                                  </div>
+                                  <div className="space-y-2">
+                                    <div className="h-2 bg-orange-200 rounded w-3/4"></div>
+                                    <div className="h-2 bg-gray-200 rounded w-1/2"></div>
+                                    <div className="h-8 bg-gradient-to-r from-orange-500 to-red-500 rounded flex items-center justify-center">
+                                      <span className="text-white text-xs font-medium">{caseStudy.company}</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </>
+                        ) : caseStudy.image ? (
+                          <img 
+                            src={caseStudy.image} 
+                            alt={caseStudy.company}
+                            className="w-full h-full object-cover"
+                          />
+                        ) : (
+                          <div className="w-full h-full bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center">
+                            <div className="text-white text-6xl font-bold opacity-20">
+                              {caseStudy.company.charAt(0)}
+                            </div>
+                          </div>
+                        )}
+                        
+                        {/* Subtle Overlay */}
+                        <div className="absolute inset-0 bg-black/5 pointer-events-none"></div>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+
+            
+          </div>
+        </section>
+        <ExploreProjects/>
       </main>
       
       <Footer />
