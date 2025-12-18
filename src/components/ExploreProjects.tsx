@@ -75,20 +75,22 @@ export default function ExploreProjects() {
                   
                   {/* Action Buttons */}
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <button 
-                      className="bg-white text-gray-900 px-8 py-4 rounded-full font-medium hover:bg-gray-100 transition-colors"
+                    <a 
+                      href="/portfolio"
+                      className="bg-white text-gray-900 px-8 py-4 rounded-full font-medium hover:bg-gray-100 transition-colors text-center"
                       onMouseEnter={() => handleMouseEnter('View Portfolio')}
                       onMouseLeave={handleMouseLeave}
                     >
                       Explore all projects
-                    </button>
-                    <button 
-                      className="bg-primary text-white px-8 py-4 rounded-full font-medium hover:bg-primary/90 transition-colors"
+                    </a>
+                    <a 
+                      href="/contact"
+                      className="bg-primary text-white px-8 py-4 rounded-full font-medium hover:bg-primary/90 transition-colors text-center"
                       onMouseEnter={() => handleMouseEnter('Get Started')}
                       onMouseLeave={handleMouseLeave}
                     >
                       Book a call
-                    </button>
+                    </a>
                   </div>
                 </div>
                 

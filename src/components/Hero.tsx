@@ -108,71 +108,95 @@ export default function Hero() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <button className="bg-primary text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-primary/90 transition-colors">
+            <a 
+              href="/contact" 
+              className="bg-primary text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-primary/90 transition-colors text-center"
+            >
               Book an intro call
-            </button>
-            <button className="text-gray-700 px-8 py-4 rounded-full text-lg font-medium border border-gray-300 hover:border-gray-400 transition-colors">
+            </a>
+            <a 
+              href="/portfolio" 
+              className="text-gray-700 px-8 py-4 rounded-full text-lg font-medium border border-gray-300 hover:border-gray-400 transition-colors text-center"
+            >
               Our Work
-            </button>
+            </a>
           </div>
 
           {/* Marquee Section */}
           <div className="mb-16">
             <div className="marquee-container">
               <div ref={marqueeRef} className="marquee-content flex space-x-8">
-                <div className="flex-shrink-0">
+                <div className="flex-shrink-0 w-96 h-64">
                   <Image
-                    src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=300&fit=crop"
-                    alt="Mobile App Design - Strategic Investment Advisory"
+                    src="/images/67fe72ebcc4ce3e2b6de98bb_Hopstack websitye.avif"
+                    alt="Hopstack - B2B SaaS Warehouse Management Platform"
                     width={400}
                     height={300}
-                    className="rounded-2xl shadow-2xl"
+                    className="w-full h-full rounded-2xl shadow-2xl object-cover"
                   />
                 </div>
-                <div className="flex-shrink-0">
+                <div className="flex-shrink-0 w-96 h-64">
                   <Image
-                    src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=300&fit=crop"
-                    alt="Digital Marketing - 100% Premium Mobile Games"
+                    src="/images/67fe743567fd82b5831f84f2_Aureon Solutions Phone mockup.avif"
+                    alt="Aureon Solutions - Mobile App Design"
                     width={400}
                     height={300}
-                    className="rounded-2xl shadow-2xl"
+                    className="w-full h-full rounded-2xl shadow-2xl object-cover"
                   />
                 </div>
-                <div className="flex-shrink-0">
+                <div className="flex-shrink-0 w-96 h-64">
                   <Image
-                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop"
-                    alt="Web Development - Policy Serotonin"
+                    src="/images/68172d9abca6ab3fb2e84f8f_Mockup 1.avif"
+                    alt="Web Development Project - Modern Design"
                     width={400}
                     height={300}
-                    className="rounded-2xl shadow-2xl"
+                    className="w-full h-full rounded-2xl shadow-2xl object-cover"
+                  />
+                </div>
+                <div className="flex-shrink-0 w-96 h-64">
+                  <Image
+                    src="/images/6818d94ac152217e4e19ffb8_Terra Studio tab.avif"
+                    alt="Terra Studio - Tablet Design Interface"
+                    width={400}
+                    height={300}
+                    className="w-full h-full rounded-2xl shadow-2xl object-cover"
                   />
                 </div>
                 {/* Duplicate for seamless loop */}
-                <div className="flex-shrink-0">
+                <div className="flex-shrink-0 w-96 h-64">
                   <Image
-                    src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=300&fit=crop"
-                    alt="Mobile App Design - Strategic Investment Advisory"
+                    src="/images/67fe72ebcc4ce3e2b6de98bb_Hopstack websitye.avif"
+                    alt="Hopstack - B2B SaaS Warehouse Management Platform"
                     width={400}
                     height={300}
-                    className="rounded-2xl shadow-2xl"
+                    className="w-full h-full rounded-2xl shadow-2xl object-cover"
                   />
                 </div>
-                <div className="flex-shrink-0">
+                <div className="flex-shrink-0 w-96 h-64">
                   <Image
-                    src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=300&fit=crop"
-                    alt="Digital Marketing - 100% Premium Mobile Games"
+                    src="/images/67fe743567fd82b5831f84f2_Aureon Solutions Phone mockup.avif"
+                    alt="Aureon Solutions - Mobile App Design"
                     width={400}
                     height={300}
-                    className="rounded-2xl shadow-2xl"
+                    className="w-full h-full rounded-2xl shadow-2xl object-cover"
                   />
                 </div>
-                <div className="flex-shrink-0">
+                <div className="flex-shrink-0 w-96 h-64">
                   <Image
-                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop"
-                    alt="Web Development - Policy Serotonin"
+                    src="/images/68172d9abca6ab3fb2e84f8f_Mockup 1.avif"
+                    alt="Web Development Project - Modern Design"
                     width={400}
                     height={300}
-                    className="rounded-2xl shadow-2xl"
+                    className="w-full h-full rounded-2xl shadow-2xl object-cover"
+                  />
+                </div>
+                <div className="flex-shrink-0 w-96 h-64">
+                  <Image
+                    src="/images/6818d94ac152217e4e19ffb8_Terra Studio tab.avif"
+                    alt="Terra Studio - Tablet Design Interface"
+                    width={400}
+                    height={300}
+                    className="w-full h-full rounded-2xl shadow-2xl object-cover"
                   />
                 </div>
               </div>

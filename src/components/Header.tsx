@@ -15,7 +15,12 @@ import {
   Zap,
   BarChart3,
   Menu,
-  X
+  X,
+  Heart,
+  GraduationCap,
+  ShoppingBag,
+  Truck,
+  Banknote
 } from 'lucide-react'
 import CursorFollower from './CursorFollower'
 
@@ -320,42 +325,82 @@ export default function Header() {
               </button>
               
               {activeDropdown === 'industries' && (
-                <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-64 bg-white rounded-xl shadow-2xl border border-gray-100 p-6 z-50">
+                <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-1 w-[400px] bg-white rounded-lg shadow-2xl border border-gray-200 p-6 z-50">
                   <div className="space-y-1">
                     <a 
-                      href="/industries/saas-technology" 
-                      className="block px-4 py-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg transition-colors"
-                      onClick={() => setActiveDropdown(null)}
-                    >
-                      SaaS & Technology
-                    </a>
-                    <a 
-                      href="/industries/ecommerce" 
-                      className="block px-4 py-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg transition-colors"
-                      onClick={() => setActiveDropdown(null)}
-                    >
-                      E-commerce
-                    </a>
-                    <a 
                       href="/industries/healthcare" 
-                      className="block px-4 py-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg transition-colors"
+                      className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group"
                       onClick={() => setActiveDropdown(null)}
                     >
-                      Healthcare
-                    </a>
-                    <a 
-                      href="/industries/finance" 
-                      className="block px-4 py-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg transition-colors"
-                      onClick={() => setActiveDropdown(null)}
-                    >
-                      Finance
+                      <div className="w-6 h-6 bg-gray-100 rounded flex items-center justify-center mt-0.5">
+                        <Heart className="w-4 h-4 text-gray-600" />
+                      </div>
+                      <div>
+                        <h4 className="font-medium text-gray-900 text-sm mb-1">Healthcare</h4>
+                        <p className="text-xs text-gray-600 leading-relaxed">
+                          Transform healthcare operations with powerful SaaS platforms
+                        </p>
+                      </div>
                     </a>
                     <a 
                       href="/industries/education" 
-                      className="block px-4 py-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg transition-colors"
+                      className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group"
                       onClick={() => setActiveDropdown(null)}
                     >
-                      Education
+                      <div className="w-6 h-6 bg-gray-100 rounded flex items-center justify-center mt-0.5">
+                        <GraduationCap className="w-4 h-4 text-gray-600" />
+                      </div>
+                      <div>
+                        <h4 className="font-medium text-gray-900 text-sm mb-1">Education</h4>
+                        <p className="text-xs text-gray-600 leading-relaxed">
+                          Build powerful EdTech SaaS solutions that scale
+                        </p>
+                      </div>
+                    </a>
+                    <a 
+                      href="/industries/ecommerce" 
+                      className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group"
+                      onClick={() => setActiveDropdown(null)}
+                    >
+                      <div className="w-6 h-6 bg-gray-100 rounded flex items-center justify-center mt-0.5">
+                        <ShoppingBag className="w-4 h-4 text-gray-600" />
+                      </div>
+                      <div>
+                        <h4 className="font-medium text-gray-900 text-sm mb-1">E-commerce</h4>
+                        <p className="text-xs text-gray-600 leading-relaxed">
+                          Scalable e-commerce SaaS solutions that convert
+                        </p>
+                      </div>
+                    </a>
+                    <a 
+                      href="/industries/logistics" 
+                      className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group"
+                      onClick={() => setActiveDropdown(null)}
+                    >
+                      <div className="w-6 h-6 bg-gray-100 rounded flex items-center justify-center mt-0.5">
+                        <Truck className="w-4 h-4 text-gray-600" />
+                      </div>
+                      <div>
+                        <h4 className="font-medium text-gray-900 text-sm mb-1">Logistics</h4>
+                        <p className="text-xs text-gray-600 leading-relaxed">
+                          Logistics SaaS platforms that optimize operations
+                        </p>
+                      </div>
+                    </a>
+                    <a 
+                      href="/industries/fintech" 
+                      className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group"
+                      onClick={() => setActiveDropdown(null)}
+                    >
+                      <div className="w-6 h-6 bg-gray-100 rounded flex items-center justify-center mt-0.5">
+                        <Banknote className="w-4 h-4 text-gray-600" />
+                      </div>
+                      <div>
+                        <h4 className="font-medium text-gray-900 text-sm mb-1">Fintech</h4>
+                        <p className="text-xs text-gray-600 leading-relaxed">
+                          Fintech SaaS solutions that scale and secure
+                        </p>
+                      </div>
                     </a>
                   </div>
                 </div>
@@ -451,7 +496,7 @@ export default function Header() {
           <div className="lg:hidden mt-4 pb-4 border-t border-gray-100">
             <nav className="flex flex-col space-y-4 pt-4">
               <a href="#services" className="text-gray-700 hover:text-primary transition-colors">Services</a>
-              <a href="#industries" className="text-gray-700 hover:text-primary transition-colors">Industries</a>
+              <a href="/industries" className="text-gray-700 hover:text-primary transition-colors">Industries</a>
               <a href="/portfolio" className="text-gray-700 hover:text-primary transition-colors">Portfolio</a>
               <a href="/about" className="text-gray-700 hover:text-primary transition-colors">About</a>
               <a href="/contact" className="bg-primary text-white px-6 py-3 rounded-full hover:bg-primary/90 transition-colors font-medium w-fit inline-block">

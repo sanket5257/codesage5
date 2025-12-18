@@ -117,10 +117,10 @@ export default function ContactPage() {
   const days = Array.from({ length: daysInMonth }, (_, i) => i + 1);
 
   return (
-    <div className="min-h-screen bg-black text-white py-8 px-4">
+    <div className="min-h-screen bg-black text-white py-8 px-4 flex items-center justify-center">
       <div
         ref={contentRef}
-        className="relative w-full max-w-5xl mx-auto bg-[#1a1a1a] rounded-2xl overflow-hidden shadow-2xl"
+        className="relative w-full max-w-6xl mx-auto bg-[#1a1a1a] rounded-2xl overflow-hidden shadow-2xl"
       >
 
         {/* Header */}
@@ -138,7 +138,7 @@ export default function ContactPage() {
 
         {/* Main Content */}
         {currentStep === 'calendar' ? (
-        <div className="grid grid-cols-1 lg:grid-cols-3 min-h-[500px]">
+        <div className="grid grid-cols-1 lg:grid-cols-3 min-h-[600px]">
           {/* Left Section - Meeting Info */}
           <div className="lg:col-span-1 bg-[#0f0f0f] p-8 flex flex-col">
             <div className="mb-6">
@@ -291,16 +291,16 @@ export default function ContactPage() {
         </div>
         ) : (
           /* Form Step */
-          <div className="p-8 min-h-[500px]">
+          <div className="p-8 min-h-[500px] flex flex-col items-center justify-center">
             <button
               onClick={() => setCurrentStep('calendar')}
               type="button"
-              className="mb-6 text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-2"
+              className="mb-6 text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-2 self-start"
             >
               ← Back to calendar
             </button>
 
-            <div className="max-w-2xl mx-auto">
+            <div className="max-w-2xl w-full mx-auto">
               <h2 className="text-2xl font-light mb-2">Enter your details</h2>
               <p className="text-gray-400 mb-6">
                 Selected: {months[currentMonth]} {selectedDate}, {currentYear} at {selectedTime}

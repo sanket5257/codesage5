@@ -151,20 +151,22 @@ export default function ServicePage({ params }: ServicePageProps) {
                   {serviceData.description}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <button 
-                    className="bg-orange-500 text-white px-8 py-4 rounded-full font-medium hover:bg-orange-600 transition-colors"
+                  <a 
+                    href="/contact"
+                    className="bg-orange-500 text-white px-8 py-4 rounded-full font-medium hover:bg-orange-600 transition-colors text-center"
                     onMouseEnter={() => handleMouseEnter('Book Call')}
                     onMouseLeave={handleMouseLeave}
                   >
                     Book an intro call
-                  </button>
-                  <button 
-                    className="border border-gray-300 text-gray-700 px-8 py-4 rounded-full font-medium hover:border-gray-400 transition-colors"
+                  </a>
+                  <a 
+                    href="/portfolio"
+                    className="border border-gray-300 text-gray-700 px-8 py-4 rounded-full font-medium hover:border-gray-400 transition-colors text-center"
                     onMouseEnter={() => handleMouseEnter('View Work')}
                     onMouseLeave={handleMouseLeave}
                   >
                     Our work
-                  </button>
+                  </a>
                 </div>
               </div>
               

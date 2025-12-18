@@ -110,34 +110,27 @@ export default function Footer() {
             <div>
               <h4 className="font-semibold text-gray-900 mb-6">Services</h4>
               <ul className="space-y-3 text-sm text-gray-600">
-                <li><a href="#" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('Learn More')} onMouseLeave={handleMouseLeave}>Web Design (UI/UX)</a></li>
-                <li><a href="#" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('Learn More')} onMouseLeave={handleMouseLeave}>Webflow Development</a></li>
-                <li><a href="#" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('Learn More')} onMouseLeave={handleMouseLeave}>Webflow SEO</a></li>
-                <li><a href="#" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('Learn More')} onMouseLeave={handleMouseLeave}>Webflow Migration</a></li>
-                <li><a href="#" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('Learn More')} onMouseLeave={handleMouseLeave}>Webflow Integration</a></li>
-                <li><a href="#" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('Learn More')} onMouseLeave={handleMouseLeave}>Webflow Support</a></li>
-                <li><a href="#" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('Learn More')} onMouseLeave={handleMouseLeave}>Growth Marketing</a></li>
-                <li><a href="#" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('Learn More')} onMouseLeave={handleMouseLeave}>Conversion Rate Optimization (CRO)</a></li>
-                <li><a href="#" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('Learn More')} onMouseLeave={handleMouseLeave}>Branding</a></li>
-                <li><a href="#" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('Learn More')} onMouseLeave={handleMouseLeave}>Webflow Agency India</a></li>
+                <li><a href="/services/ui-ux-design" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('Learn More')} onMouseLeave={handleMouseLeave}>Web Design (UI/UX)</a></li>
+                <li><a href="/services/webflow-development" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('Learn More')} onMouseLeave={handleMouseLeave}>Webflow Development</a></li>
+                <li><a href="/services/webflow-seo" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('Learn More')} onMouseLeave={handleMouseLeave}>Webflow SEO</a></li>
+                <li><a href="/services/webflow-migration" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('Learn More')} onMouseLeave={handleMouseLeave}>Webflow Migration</a></li>
+                <li><a href="/services/webflow-integration" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('Learn More')} onMouseLeave={handleMouseLeave}>Webflow Integration</a></li>
+                <li><a href="/services/webflow-support" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('Learn More')} onMouseLeave={handleMouseLeave}>Webflow Maintenance and Support</a></li>
+                <li><a href="/services/growth-marketing" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('Learn More')} onMouseLeave={handleMouseLeave}>Growth Marketing</a></li>
+                <li><a href="/services/conversion-optimization" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('Learn More')} onMouseLeave={handleMouseLeave}>Conversion Rate Optimization</a></li>
+                <li><a href="/services/branding" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('Learn More')} onMouseLeave={handleMouseLeave}>Branding</a></li>
               </ul>
             </div>
             
             {/* Industry */}
             <div>
-              <h4 className="font-semibold text-gray-900 mb-6">Industry</h4>
+              <h4 className="font-semibold text-gray-900 mb-6">Industries</h4>
               <ul className="space-y-3 text-sm text-gray-600">
-                <li><a href="#" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('View Projects')} onMouseLeave={handleMouseLeave}>B2B SaaS</a></li>
-                <li><a href="#" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('View Projects')} onMouseLeave={handleMouseLeave}>Artificial Intelligence</a></li>
-                <li><a href="#" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('View Projects')} onMouseLeave={handleMouseLeave}>Web3</a></li>
-                <li><a href="#" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('View Projects')} onMouseLeave={handleMouseLeave}>Information Technology</a></li>
-                <li><a href="#" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('View Projects')} onMouseLeave={handleMouseLeave}>Financial Services</a></li>
-                <li><a href="#" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('View Projects')} onMouseLeave={handleMouseLeave}>Healthcare</a></li>
-                <li><a href="#" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('View Projects')} onMouseLeave={handleMouseLeave}>E-commerce</a></li>
-                <li><a href="#" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('View Projects')} onMouseLeave={handleMouseLeave}>Hospitality</a></li>
-                <li><a href="#" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('View Projects')} onMouseLeave={handleMouseLeave}>Gaming</a></li>
-                <li><a href="#" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('View Projects')} onMouseLeave={handleMouseLeave}>Startups</a></li>
-                <li><a href="#" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('View Projects')} onMouseLeave={handleMouseLeave}>Enterprises</a></li>
+                <li><a href="/industries/healthcare" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('View Projects')} onMouseLeave={handleMouseLeave}>Healthcare</a></li>
+                <li><a href="/industries/education" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('View Projects')} onMouseLeave={handleMouseLeave}>Education</a></li>
+                <li><a href="/industries/ecommerce" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('View Projects')} onMouseLeave={handleMouseLeave}>E-commerce</a></li>
+                <li><a href="/industries/logistics" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('View Projects')} onMouseLeave={handleMouseLeave}>Logistics</a></li>
+                <li><a href="/industries/fintech" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('View Projects')} onMouseLeave={handleMouseLeave}>Fintech</a></li>
               </ul>
             </div>
             
@@ -145,14 +138,11 @@ export default function Footer() {
             <div>
               <h4 className="font-semibold text-gray-900 mb-6">Company</h4>
               <ul className="space-y-3 text-sm text-gray-600">
-                <li><a href="#" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('View Portfolio')} onMouseLeave={handleMouseLeave}>Portfolio</a></li>
-                <li><a href="#" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('View Pricing')} onMouseLeave={handleMouseLeave}>Pricing</a></li>
-                <li><a href="#" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('Contact Us')} onMouseLeave={handleMouseLeave}>Contact</a></li>
-                <li><a href="#" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('View Resources')} onMouseLeave={handleMouseLeave}>Resources</a></li>
+                <li><a href="/portfolio" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('View Portfolio')} onMouseLeave={handleMouseLeave}>Portfolio</a></li>
+                <li><a href="/about" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('About Us')} onMouseLeave={handleMouseLeave}>About</a></li>
+                <li><a href="/contact" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('Contact Us')} onMouseLeave={handleMouseLeave}>Contact</a></li>
+                <li><a href="/careers" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('Join Our Team')} onMouseLeave={handleMouseLeave}>Careers</a></li>
                 <li><a href="#" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('Read Blogs')} onMouseLeave={handleMouseLeave}>Blogs</a></li>
-                <li><a href="#" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('View Integration')} onMouseLeave={handleMouseLeave}>Integration</a></li>
-                <li><a href="#" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('View Migrations')} onMouseLeave={handleMouseLeave}>Migrations</a></li>
-                <li><a href="#" className="hover:text-gray-900 transition-colors" onMouseEnter={() => handleMouseEnter('Join Our Team')} onMouseLeave={handleMouseLeave}>Careers</a></li>
               </ul>
             </div>
           </div>
