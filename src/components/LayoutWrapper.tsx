@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Loader from './Loader'
 import SmoothScroll from './SmoothScroll'
 import Mascot from './Mascot'
+import VerticalLines from './VerticalLines'
 
 interface LayoutWrapperProps {
   children: React.ReactNode
@@ -42,6 +43,7 @@ export default function LayoutWrapper({ children }: LayoutWrapperProps) {
   return (
     <>
       <SmoothScroll />
+      <VerticalLines />
       {isLoading && <Loader onComplete={handleLoaderComplete} />}
       <div 
         className={`transition-opacity duration-500 ${

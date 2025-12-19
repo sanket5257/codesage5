@@ -149,3 +149,48 @@ body {
 .pause-animation:hover {
   animation-play-state: paused;
 }
+
+/* Modern Layout Enhancements */
+.modern-container {
+  position: relative;
+  max-width: calc(100vw - 4rem);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@media (min-width: 1024px) {
+  .modern-container {
+    max-width: calc(100vw - 8rem);
+    padding: 0 4rem;
+  }
+}
+
+/* Subtle grid overlay for modern feel */
+.grid-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.02;
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Vertical line animations */
+@keyframes lineGlow {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.line-glow {
+  animation: lineGlow 4s ease-in-out infinite;
+}
